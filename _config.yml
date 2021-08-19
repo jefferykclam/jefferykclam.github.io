@@ -6,6 +6,6 @@ relative_links:
 include:
   - README.md
   - StateSpaceModel.md
-
+markdown: kramdown
 theme: jekyll-theme-cayman
 mathjax: true
