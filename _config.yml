@@ -8,3 +8,4 @@ include:
   - StateSpaceModel.md
 
 theme: jekyll-theme-cayman
+mathjax: true
