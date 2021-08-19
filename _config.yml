@@ -8,4 +8,5 @@ include:
   - StateSpaceModel.md
 markdown: kramdown
 theme: jekyll-theme-cayman
-mathjax: true
+kramdown:
+    math_engine: katex
