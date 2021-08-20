@@ -26,7 +26,7 @@ p(y_1, y_2, \ldots, y_T) = p(y_1) \cdot \prod^T_{t=2} p(y_t | y_{t-1})
 $$
 
 
-However, it is restrictive since it is equivalent to assume $p(y_t |y_1,\ldots y_{t-1}) = p(y_t | y_{t-1})$. Generalize to second order, we have
+However, it is restrictive since it is equivalent to assume $$p(y_t | y_1,\ldots y_{t-1}) = p(y_t | y_{t-1})$$. Generalize to second order, we have
 
 
 $$
@@ -110,7 +110,7 @@ x_t = A^{(s_t)}x_{t-1} + B^{(s_t)} u_t + \epsilon^{(s_t)}, \quad \epsilon^{(s_t)
 $$
 
 
-The state transition probabilities, $p(s_t |s_{t-1})$, are specified by a Markov chain (i.e., a $K \times K$ transition matrix).
+The state transition probabilities, $$p(s_t |s_{t-1})$$, are specified by a Markov chain (i.e., a $$K \times K$$ transition matrix).
 
 ### rSLDS model
 
@@ -147,9 +147,9 @@ p(y_{i,t} \ | \ z_{i,t}) = \frac{1}{y_{i,t}!} \eta(z_{i,t})^{y_{i,t}} \exp(-\eta
 $$
 
 
-The posterior distribution $p(x_{1:T} | y_{1:T})$ does not correspond to a well-studied standard distribution with closed form expectation. Therefore, we approximate $p(x_{1:T} | y_{1:T})$ with an appropriate distribution $q(x_{1:T})$.
+The posterior distribution $$p(x_{1:T} | y_{1:T})$$ does not correspond to a well-studied standard distribution with closed form expectation. Therefore, we approximate $$p(x_{1:T} | y_{1:T})$$ with an appropriate distribution $q(x_{1:T})$.
 
-Simplify the notation $x_{1:T}$ and $y_{1:T}$ by $\mathbf{x} = \text{vec}(x_{1:T})$ and $ \mathbf{y} = \text{vec}(y_{1:T})$. By choosing $\eta(\cdot) = \exp(\cdot)$, the posterior $P(\mathbf{x}| \mathbf{y})$ has a single peak (?) and so we consider $q(\mathbf{x}) = q(\mathbf{x} | \mu, \Sigma) = \mathcal{N}(\mu, \Sigma)$, with normal density function
+Simplify the notation $x_{1:T}$ and $y_{1:T}$ by $\mathbf{x} = \text{vec}(x_{1:T})$ and $ \mathbf{y} = \text{vec}(y_{1:T})$. By choosing $\eta(\cdot) = \exp(\cdot)$, the posterior $$p(\mathbf{x}| \mathbf{y})$$ has a single peak (?) and so we consider $$q(\mathbf{x}) = q(\mathbf{x} | \mu, \Sigma) = \mathcal{N}(\mu, \Sigma)$$, with normal density function
 
 
 $$
@@ -218,7 +218,7 @@ $$
 $$
 
 
-Note that the joint distribution over $\mathbf{x}_t$ ( or equivalently, distributoon over $\mathbf{x}$) is multivariate normal. In particular, grouping first and second order terms, the prior mean $\mu_{\pi}$ and covariance $\Sigma_{\pi}$ can be expressed using $A, Q, Q_0$ and $x_0$:
+Note that the joint distribution over $$\mathbf{x}_t$$ ( or equivalently, distributoon over $$\mathbf{x}$$) is multivariate normal. In particular, grouping first and second order terms, the prior mean $\mu_{\pi}$ and covariance $\Sigma_{\pi}$ can be expressed using $$A, Q, Q_0$$ and $$x_0$$:
 
 
 $$
@@ -286,7 +286,7 @@ D_{KL}( q(\mathbf{x} \ || \ p(\mathbf{x}) )) = \frac{1}{2} \left[ \log \frac{|\S
 $$
 
 
-As $\mathbb{E}_{q(\mathbf{x})} \left[ \log  p(\mathbf{y}) \right]$ is constant for any $\mathbf{x}$, minimizing $D_{KL}( q(\mathbf{x}) \ || \ p(\mathbf{x}|\mathbf{y})) )$ is equivalent to maximizing the  following lower bound (up to constant):
+As $$\mathbb{E}_{q(\mathbf{x})} \left[ \log  p(\mathbf{y}) \right]$$ is constant for any $$\mathbf{x}$$, minimizing $$D_{KL}( q(\mathbf{x}) \ || \ p(\mathbf{x}|\mathbf{y})) )$$ is equivalent to maximizing the  following lower bound (up to constant):
 
 
 $$
