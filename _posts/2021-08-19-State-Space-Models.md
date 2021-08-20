@@ -8,8 +8,6 @@ tags: [documentation,sample]
 
 
 
-# State Space Model
-
 ### Intuition
 
 General model for sequential data:
