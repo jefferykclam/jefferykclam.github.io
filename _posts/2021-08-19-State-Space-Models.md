@@ -137,7 +137,7 @@ $$
 $$
 where the log-likelihood is
 $$
-\begin{split}
+\begin{align}
 \log p(\mathbf{y} | \mathbf{x}) &= \sum^T_{t=1} \sum^N_{i=1} \log p(y_{i,t}| \mathbf{x})
 \\
 &=\sum^T_{t=1} \sum^N_{i=1} \log \left(  \frac{1}{y_{i,t}!} \eta(z_{i,t})^{y_{i,t}} \exp(-\eta(z_{i,t})) \right)
@@ -150,7 +150,7 @@ $$
 \\
 &= \mathbf{y}^T \left( \widetilde{C} \mathbf{x} + \widetilde{d} \right) - \mathbf{e}_{NT}^T \exp \left( \widetilde{C} \mathbf{x} + \widetilde{d} \right) + \text{Constant}
 
-\end{split}
+\end{align}
 $$
 The prior over $\mathbf{x}$ is defined by the dynamics
 $$
