@@ -147,9 +147,9 @@ p(y_{i,t} \ | \ z_{i,t}) = \frac{1}{y_{i,t}!} \eta(z_{i,t})^{y_{i,t}} \exp(-\eta
 $$
 
 
-The posterior distribution $$p(x_{1:T} \vert y_{1:T})$$ does not correspond to a well-studied standard distribution with closed form expectation. Therefore, we approximate $$p(x_{1:T}  \verty_{1:T})$$ with an appropriate distribution $q(x_{1:T})$.
+The posterior distribution $$p(x_{1:T} \vert y_{1:T})$$ does not correspond to a well-studied standard distribution with closed form expectation. Therefore, we approximate $$p(x_{1:T}  \vert y_{1:T})$$ with an appropriate distribution $q(x_{1:T})$.
 
-Simplify the notation $x_{1:T}$ and $y_{1:T}$ by $\mathbf{x} = \text{vec}(x_{1:T})$ and $ \mathbf{y} = \text{vec}(y_{1:T})$. By choosing $\eta(\cdot) = \exp(\cdot)$, the posterior $$p(\mathbf{x} \vert \mathbf{y})$$ has a single peak (?) and so we consider $$q(\mathbf{x}) = q(\mathbf{x}  \mu, \vert\Sigma) = \mathcal{N}(\mu, \Sigma)$$, with normal density function
+Simplify the notation $x_{1:T}$ and $y_{1:T}$ by $\mathbf{x} = \text{vec}(x_{1:T})$ and $ \mathbf{y} = \text{vec}(y_{1:T})$. By choosing $\eta(\cdot) = \exp(\cdot)$, the posterior $$p(\mathbf{x} \vert \mathbf{y})$$ has a single peak (`more explanation later`) and so we consider $$q(\mathbf{x}) = q(\mathbf{x}  \mu, \vert\Sigma) = \mathcal{N}(\mu, \Sigma)$$, with normal density function
 
 
 $$
