@@ -26,7 +26,7 @@ p(y_1, y_2, \ldots, y_T) = p(y_1) \cdot \prod^T_{t=2} p(y_t | y_{t-1})
 $$
 
 
-However, it is restrictive since it is equivalent to assume $$p(y_t \vert y_1,\ldots y_{t-1}) = p(y_t \vert y_{t-1})$$. Generalize to second order, we have
+However, it is restrictive since it is equivalent to assume $p(y_t \vert y_1,\ldots y_{t-1}) = p(y_t \vert y_{t-1})$. Generalize to second order, we have
 
 
 $$
