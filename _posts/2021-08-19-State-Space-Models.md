@@ -308,7 +308,7 @@ $$
 
 
 
-> More about the tricks to optimize will be summarized later
+> More about the tricks on optimization will be summarized later
 
 
 
