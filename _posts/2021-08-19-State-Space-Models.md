@@ -11,9 +11,13 @@ tags: [documentation,sample]
 ### Intuition
 
 General model for sequential data:
+
+
 $$
 p(y_1, y_2, \ldots, y_T) = \prod^T_{t=1} p(y_t | y_1, \ldots y_{t-1})
 $$
+
+
 Easiest way to treat sequential data would be the (first order) **Markov model**:
 $$
 p(y_1, y_2, \ldots, y_T) = p(y_1) \cdot \prod^T_{t=2} p(y_t | y_{t-1})
@@ -149,7 +153,6 @@ $$
 &= \mathbf{y}^T \left( (\mathbb{I}_T \otimes C)\mathbf{x} + \mathbf{1}_T \otimes d \right) - \mathbf{e}_{NT}^T \exp( (\mathbb{I}_T \otimes C)\mathbf{x} + \mathbf{1}_T \otimes d ) + \text{Constant}
 \\
 &= \mathbf{y}^T \left( \widetilde{C} \mathbf{x} + \widetilde{d} \right) - \mathbf{e}_{NT}^T \exp \left( \widetilde{C} \mathbf{x} + \widetilde{d} \right) + \text{Constant}
-
 \end{align}
 $$
 The prior over $\mathbf{x}$ is defined by the dynamics
