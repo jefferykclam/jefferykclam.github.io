@@ -46,6 +46,8 @@ $$
 $$
 
 
+
+
 By considering $\hat{y}_{itr}$ as the mean of a Poisson distribution (modeling the observed count), i.e., $y_{itr} \sim \text{Poisson}(\hat{y}_{itr})$, the decomposition is known as **Poisson tensor factorization**.
 
 
@@ -104,11 +106,13 @@ $$
 &= \underbrace{- H(Q) - \mathbb{E}_Q[ \log p(Y, \mathcal{S} \ \vert \ \mathcal{H})]}_{ELBO} + \text{constant}
 \end{align}
 $$
+
+
 We can minimize the KL divergence by maximizing the $ELBO$. Maximizing $ELBO$ can be achieved by coordinate ascent method.
 
 
 
-
+By the mean-field assumption on the posterior approximation $Q$ and the choice of the prior distribution, 
 
 
 
