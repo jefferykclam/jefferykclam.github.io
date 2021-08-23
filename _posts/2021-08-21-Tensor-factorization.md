@@ -10,9 +10,7 @@ tags: [documentation,sample]
 
 
 
-> Bayesian Poisson Tensor Factorization for Inferring Multilateral Relations from Sparse Dyadic Event Counts
-
-[2015 Pointer](https://arxiv.org/pdf/1506.03493.pdf)
+> [Bayesian Poisson Tensor Factorization for Inferring Multilateral Relations from Sparse Dyadic Event Counts](https://arxiv.org/pdf/1506.03493.pdf)
 
 #### Bayesian Poisson Tensor Factorization
 
