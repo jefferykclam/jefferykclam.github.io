@@ -48,7 +48,11 @@ $$
 
 
 
-By considering $\hat{y}_{itr}$ as the mean of a Poisson distribution (modeling the observed count), i.e., $y_{itr} \sim \text{Poisson}(\hat{y}_{itr})$, the decomposition is known as **Poisson tensor factorization**.
+By considering $\hat{y}_{itr}$ as the mean of a Poisson distribution (modeling the observed count), i.e., 
+
+
+
+$y_{itr} \sim \text{Poisson}(\hat{y}_{itr})$, the decomposition is known as **Poisson tensor factorization**.
 
 
 
@@ -112,7 +116,11 @@ We can minimize the KL divergence by maximizing the $ELBO$. Maximizing $ELBO$ ca
 
 
 
-By the mean-field assumption on the posterior approximation $Q$ and the choice of the prior distribution, 
+### State Space Methods Revisit
+
+
+
+The mean-field assumption on the posterior approximation $Q$ and the choice of the prior distribution
 
 
 
