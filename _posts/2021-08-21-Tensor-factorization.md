@@ -10,9 +10,7 @@ tags: [documentation,sample]
 
 
 
-```
-Bayesian Poisson Tensor Factorization for Inferring Multilateral Relations from Sparse Dyadic Event Counts
-```
+> Bayesian Poisson Tensor Factorization for Inferring Multilateral Relations from Sparse Dyadic Event Counts
 
 [2015 Pointer](https://arxiv.org/pdf/1506.03493.pdf)
 
@@ -38,7 +36,15 @@ where $\hat{y}_{itr}$ is usually called **reconstruction count**. By aggregratin
 
 
 $$
-\Theta^{(1)} = \left[ (\theta^{(1)}_{ik})_{i=1}^N\right]_{k=1}^K \in \mathbb{R}^{N \times K}, \ \Theta^{(2)} = \left[ (\theta^{(1)}_{tk})_{t=1}^T \right]_{k=1}^K \in \mathbb{R}^{T \times K}, \ \Theta^{(3)} = \left[ (\theta^{(1)}_{rk})_{r=1}^R \right]_{k=1}^K \in \mathbb{R}^{R \times K}
+\Theta = \left\{
+\begin{align}
+&\Theta^{(1)} = \left[ (\theta^{(1)}_{ik})_{i=1}^N\right]_{k=1}^K \in \mathbb{R}^{N \times K},
+\\
+&\Theta^{(2)} = \left[ (\theta^{(1)}_{tk})_{t=1}^T \right]_{k=1}^K \in \mathbb{R}^{T \times K},
+\\
+&\Theta^{(3)} = \left[ (\theta^{(1)}_{rk})_{r=1}^R \right]_{k=1}^K \in \mathbb{R}^{R \times K}
+\end{align}
+\right\}
 $$
 
 
@@ -72,7 +78,9 @@ Let $\mathcal{H} = \{ \alpha, \beta^{(1)}, \beta^{(2)}, \beta^{(3)}\}$ to be the
 
 
 $$
-Q = \prod^K_{k=1} \prod^N_{i=1} \Gamma(\gamma_{ik}, \delta_{ik}) \prod^T_{t=1} \Gamma(\gamma_{tk}, \delta_{tk}) \prod^R_{r=1} \Gamma(\gamma_{rk}, \delta_{rk}) \quad \text{and} \quad p(\Theta^{(1)}, \Theta^{(2)}, \Theta^{(3)}  \ \vert \ Y, \mathcal{H}) \approx Q
+p(\Theta^{(1)}, \Theta^{(2)}, \Theta^{(3)}  \ \vert \ Y, \mathcal{H}) \approx Q, \quad \text{where}
+\\
+Q = \prod^K_{k=1} \prod^N_{i=1} \Gamma(\gamma_{ik}, \delta_{ik}) \prod^T_{t=1} \Gamma(\gamma_{tk}, \delta_{tk}) \prod^R_{r=1} \Gamma(\gamma_{rk}, \delta_{rk}) 
 $$
 
 
@@ -89,7 +97,9 @@ In VI, $\mathcal{S}$ is set to those that minimize the KL divergence with the ex
 
 $$
 \begin{align}
-D_{KL} ( Q(\mathcal{S})  \ \Vert \ p(\Theta \vert Y, \mathcal{H})) &= - H(Q) - \mathbb{E}_Q \left[ \log \frac{p(Y \vert \mathcal{H}, \mathcal{S}) p(\mathcal{S})}{p(Y \vert \mathcal{H})} \right]
+& \quad D_{KL} ( Q(\mathcal{S})  \ \Vert \ p(\Theta \vert Y, \mathcal{H}))
+\\
+&= - H(Q) - \mathbb{E}_Q \left[ \log \frac{p(Y \vert \mathcal{H}, \mathcal{S}) p(\mathcal{S})}{p(Y \vert \mathcal{H})} \right]
 \\
 &= - H(Q) - \mathbb{E}_Q\left[ \log p(Y \vert \mathcal{H}, \mathcal{S} ) p ( \mathcal{S} )\right] + \text{constant}
 \\
